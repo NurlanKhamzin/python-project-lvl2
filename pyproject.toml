@@ -1,8 +1,11 @@
 [tool.poetry]
-name = "hexlet-python-package"
-version = "0.3.0"
+name = "hexlet-code"
+version = "0.1.0"
 description = ""
 authors = ["Nurlan Khamzin <khamzin1991@gmail.com>"]
+packages = [
+  { include = "gendiff_folder" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
@@ -14,7 +17,7 @@ pytest-cov = "^2.11.1"
 wemake-python-styleguide = "^0.15.2"
 
 [tool.poetry.scripts]
-hexlet-python-package = "hexlet_python_package.scripts.hexlet_python_package:main"
+generate_diff = "gendiff_folder.scripts.gendiff_s:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
